@@ -1,0 +1,13 @@
+<tr class="cases">			
+<td align="center"><%= c.case_no %></td>
+<td align="center"><%= c.category %></td>
+<% if admin? %>
+<td><%= c.party %></td>
+<% else %>
+<td><%= c.party %></td>		
+<% end %>	
+<% if admin? %>
+<td align="center"><%= link_to("Edit", edit_case_path(c.id)) %>&nbsp &nbsp
+<%= link_to("Delete", case_path(c.id), data: {:confirm => "Are you sure you want to delete?"}, :method => :delete) %></td>
+<% end %>
+</tr>

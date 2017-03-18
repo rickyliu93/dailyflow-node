@@ -1,0 +1,37 @@
+<% @page_title = "Update case #{@case.id}" %>
+
+<%= error_messages_for(@case) %>
+
+<div class="edit">
+	<h2>Update Case</h2>
+
+	<%= form_for(@case)do |f| %>
+	
+	<fieldset>
+		<legend></legend>
+	
+		<th>Case No</th>
+		<br>
+		<td><%= f.text_field(:case_no) %></td>
+		<br>
+	
+		<th>Category</th>
+		<br>
+		<td><%= f.text_field(:category) %></td>
+		<br>
+	
+		<th>Party</th>
+		<br>
+		<td><%= f.text_field(:party) %></td>
+		<br>
+	</fieldset>
+
+	<div class="form-buttons">
+  		<%= f.submit("Update Page") %>
+	</div>
+    	
+    <% end %> 
+   	<br>    
+   	<%= link_to "<<back", cases_path %>
+   
+ </div>   	

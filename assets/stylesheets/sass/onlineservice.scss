@@ -1,0 +1,252 @@
+#onlinecontent::before {
+  content:"";
+  background: url("search-background.png");
+  background-size: 25px 25px;
+  opacity: 0.1;
+  width: 100vw;
+  height: 96vh;
+  padding: 0;
+  margin-left: 0;
+  position: absolute;  
+  z-index: -1;
+}
+
+#onlinecontent {
+  padding: 0vh;
+  margin-top: 4vh;
+  z-index: 1;
+  height:85vh;
+    
+  #tools {
+  float: left;
+                
+    #search-menu {
+      margin: 9vh 0 0 10vw;
+    
+      #search {
+        float: left;
+        padding: 0;
+        width: 25vw;
+      }
+    
+      #searchbar {
+        width: 80vw;
+      }
+      
+      #upload {
+        float: left;
+        margin-left: 12vw;
+        width: 20vw;
+      }
+      
+      li {
+        list-style-type: none;
+        margin-top: 0.5vh;
+       
+        a {
+         font-size: 2vh;
+         margin-left: 8vw;
+         padding: 0; 
+        }
+      }       
+    }
+  }
+  
+    #usermenu {
+      margin: 6vh 0 0 0;
+      padding: 0.5vw 0.5vh;
+    }
+    
+    .dropdown-menu {
+      top: 14vh;
+      left: 87vw;
+      opacity: 0.9;
+      
+      a {
+        font-size: 1.5vh;
+      }
+    }   
+          
+  #onlinebox{
+    margin-left: 10vw;
+           
+    #count {
+      float: right;
+      font-size: 2vh;
+      margin: 0 15vw 0 0;     
+    }
+    
+    #nocase {
+      font-size: 3vh;
+      margin-top: 45vh;
+      margin-left: 33vw;
+      width: 30vw;
+      position: absolute;
+    }
+    
+   #casestable {
+    float: left;
+    font-size: 1.5vh;
+    table-layout: fixed;
+    display: block;
+    margin: 6vh 0 0 0;
+    position: absolute;
+      
+      #casesheader {
+        
+        col:nth-child(1){width:8vw;}
+        col:nth-child(2){width:8vw;}
+        col:nth-child(3){width:62vw;}
+        col:nth-child(4){width:8vw;}
+      
+        td{
+          background-color: #446bb3;
+          color: #ffffff;
+          padding: 1.0vh;
+          line-height: 2vh;
+          text-align: center;
+        }
+       }
+      
+      #innertable {
+        height: 65vh;
+        overflow-y: scroll;  
+      
+          table {
+            
+             
+            col:nth-child(1){width:8vw;}
+            col:nth-child(2){width:8vw;}
+            col:nth-child(3){width:62vw;}
+            col:nth-child(4){width:8vw;}
+            
+            tr:nth-child(even) {
+              background: #CCC;
+              width: auto;
+            }
+            
+            tr:nth-child(odd) {
+              background: #dddddd;
+            }
+            
+            td {
+              padding-right: 10px;
+              line-height: 3.8vh;
+            }
+          } 
+       }  
+    }
+   
+    #loader {
+      position: absolute;
+      left: 46vw;
+      top: 52vh;
+      z-index: 100;
+    }
+    
+    .pagination {
+      font-size: 2vh;
+      width: 50vw;
+      margin-top: 0vh;
+    }
+        
+    footer{
+      height: 5vh; 
+      width:65vw;
+      position: absolute;
+      top: 90vh; 
+      
+      #indemnifier {
+      font-size: 1.6vh;
+      margin-left: 0.5vw;
+      width: 65vw;
+      word-break: break-word;
+      }
+    }
+  }
+  
+  @media (max-width: 1025px) { 
+    #tools {
+      float: left;   
+      
+      #searchbutton {
+        top: 1vh;
+        float: left;
+        margin: 4vh 0 0 5vw;
+        font-size: 2.5vh;
+      }
+    
+      #search-menu{
+      margin: 10vh 0 0 13vw;
+      position: relative;
+      width: 25vw;
+          
+        #searchbar {
+        
+        #search {
+         width: 35vw;
+        } 
+        
+        a {
+          color: #ffffff;
+        }
+        }
+      }
+    }   
+     
+    #usermenu {
+      float: right;
+      top: 5vh;
+      margin: 6vh 0 0 40vw;
+      font-size: 2vh;
+      position: absolute;
+      z-index: 10;
+    }
+    
+    .dropdown-menu {
+        top: 15vh;
+        left: 45vw;
+              
+        a {
+          font-size: 2vh;
+        }
+      }
+  
+      
+    #onlinebox {
+    
+      #casestable {
+        float: left;
+        font-size: 1.5vh;
+        table-layout: fixed;
+        display: block;
+        margin: 15vh 0 0 0;
+        position: absolute;
+         
+        #innertable {
+          height: 60vh;
+          overflow-y: scroll;  
+        }
+      }
+        
+      #count {
+        float: left;
+        font-size: 1.8vh;
+        margin: 12vh 0 0 25vw;     
+      } 
+      
+      footer{
+        top: 85vh;
+  
+        #indemnifier {
+        font-size: 1vh;
+        margin-left: 0.5vw;
+        width: 65vw;
+        word-break: break-word;
+        }           
+      }            
+    }    
+  }
+}
+
+

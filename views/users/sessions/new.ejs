@@ -1,0 +1,23 @@
+<div class="container">
+	<h2>Log in</h2>
+	
+	<h4>Please Log in to search case record.</h4>
+	<br>
+	<p> We tried our best to keep all the data correctly, however, we do not guarantee the accurancy and completeness.</p>
+	<p> Please inform us if there is anything wrong, thanks! </p>
+	<br>
+	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+	  <div class="field">
+	    <%= f.label :email %>
+	    <%= f.email_field :email, autofocus: true %>
+	  </div>
+	
+	  <div class="field">
+	    <%= f.label :password %>
+	    <%= f.password_field :password, autocomplete: "off" %>
+	  </div>
+	
+	  <div class="actions">
+	    <%= f.submit "Log in" %>
+	  </div>
+</div>
